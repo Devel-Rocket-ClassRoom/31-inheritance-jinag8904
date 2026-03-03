@@ -1,11 +1,10 @@
 using System;
 
-Animal[] animals = 
-{
-    new Lion("시바", 5),
-    new Elephant("덤보", 10),
-    new Penguin("뽀로로", 3)
-};
+Lion lion = new Lion("시바", 5);
+Elephant ele = new Elephant("덤보", 10);
+Penguin pen = new Penguin("뽀로로", 3);
+
+Animal[] animals = { lion, ele, pen };
 
 Console.WriteLine("[동물 정보]");
 foreach(var animal in animals)
@@ -21,4 +20,11 @@ foreach (var animal in animals)
 
 Console.WriteLine("\n[동물 행동]");
 
-animals[0].Eat();
+lion.Eat();
+lion.Hunt();
+
+ele.Eat();
+ele.SprayWater();
+
+pen.Eat();
+pen.Swim();
